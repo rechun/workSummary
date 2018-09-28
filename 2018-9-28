@@ -8,7 +8,18 @@ git clone https://github.com/phacility/libphutil.git
 配置环境
 将arcanist中的bin目录配置在全局的PATH中
 如果遇到/usr/bin/env: php: 没有那个文件或目录, 执行  yum install -y php.x86_64 安装
-在指定的git项目根目录下，并且确保已经创建了.arcconfig文件，.arcconfig文件创建参考文档最后（其实就是个配置，用来指定review平台地址和默认对比的分支，默认对比dev，直接拷贝现有的项目配置即可：ark-agent）
+******************************************************************************************************
+今天安装php7.2的时候，在php.ini文件里
+;extension=php_curl.dll ，删除前面的分号 ; （找到）
+
+查找 ; extension_dir = "ext" 并替换为 extension_dir = "C:\PHP\ext" ，（没找到）
+
+后来发现 ;前面
+******************************************************************************************************
+
+
+在指定的git项目根目录下，并且确保已经创建了.arcconfig文件，.arcconfig文件创建参考文档最后
+（其实就是个配置，用来指定review平台地址和默认对比的分支，默认对比dev，直接拷贝现有的项目配置即可：ark-agent）
 
 arc install-certificate
 安装证书，根据命令行提出的url，访问并输入序列号
