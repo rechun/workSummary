@@ -10,11 +10,11 @@ git clone https://github.com/phacility/libphutil.git
 如果遇到/usr/bin/env: php: 没有那个文件或目录, 执行  yum install -y php.x86_64 安装
 ******************************************************************************************************
 今天安装php7.2的时候，在php.ini文件里
-;extension=php_curl.dll ，删除前面的分号 ; （找到）
+;extension=php_curl.dll ，删除前面的分号 ; （没找到）
 
-查找 ; extension_dir = "ext" 并替换为 extension_dir = "C:\PHP\ext" ，（没找到）
+查找 ; extension_dir = "ext" 并替换为 extension_dir = "C:\PHP\ext" ，（找到）
 
-后来发现 ;前面
+后来发现;extension=php_curl.dll 没有php_curl.dll
 ******************************************************************************************************
 
 
