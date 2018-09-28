@@ -1,0 +1,41 @@
+安装arc工具进行代码review
+
+安装arc工具
+git clone https://github.com/phacility/arcanist.git
+git clone https://github.com/phacility/libphutil.git
+两者需放在同一个目录中，建议创建一个arc目录，分别下载两个项目
+
+配置环境
+将arcanist中的bin目录配置在全局的PATH中
+如果遇到/usr/bin/env: php: 没有那个文件或目录, 执行  yum install -y php.x86_64 安装
+在指定的git项目根目录下，并且确保已经创建了.arcconfig文件，.arcconfig文件创建参考文档最后（其实就是个配置，用来指定review平台地址和默认对比的分支，默认对比dev，直接拷贝现有的项目配置即可：ark-agent）
+
+arc install-certificate
+安装证书，根据命令行提出的url，访问并输入序列号
+
+代码review
+开发规范：
+所有的项目需拥有master和dev两个分支，如果不存在dev分支，请先创建dev分支，永远不在master和dev分支上做任何开发
+master为线上稳定版代码，dev为开发稳定版
+举例：需要开发一个新功能时，在dev分支上
+
+git checkout -b new_branch
+然后基于此分支开发，add和commit还是遵循之前的git操作，只是将push操作拆分成为arc diff和land操作
+
+执行git add， git commit后，执行
+
+arc diff
+会交互式的出现编辑界面，填入本次提交的简介和执行的reviewer，其他可以忽略， 多个reviewer之间用逗号隔开
+
+arc diff之后会生成一个url，发给指定的reviewer
+review通过之后执行
+
+arc land --onto dev
+将本分支的代码自动合并到远程dev分支。
+
+注意：应该是直接合并到远程dev分支，本地dev应该是没有最新提交的代码的，如果需要再开发一个新功能，记得先在dev下pull拉取最新代码。
+
+考虑到可能同时有别的同事已经对dev做了一些代码提交，每次在开发之前，记得在当前开发分支下执行
+
+git rebase dev
+拉取dev最新代码，如果本地的dev分支落后于远端，arc land会失败
