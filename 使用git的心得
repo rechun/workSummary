@@ -1,0 +1,15 @@
+2018-10-16
+
+昨天在dev分支提交了一份代码
+checkout回我自己的分支后，发现代码变的跟dev一样了。
+
+
+我选择git log后 git reset --hard commitid
+
+在add 代码的时候git拒绝了
+
+后来才知道要git push -f 强制推上去。
+
+在-f前git status查看了状态
+
+
