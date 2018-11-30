@@ -44,3 +44,13 @@ git pull origin branchName
 先将branchName远程的代码拉取到自己的本地。
 
 然后再pushorigin branchName
+
+
+
+********************************
+
+在使用git clone ssh git地址的时候  fatal 说我没有协议。
+
+查了一下发现是因为windows的字符集有问题  gitBash不识别。
+
+也是醉了(＃￣～￣＃)
