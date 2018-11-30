@@ -13,3 +13,34 @@ checkout回我自己的分支后，发现代码变的跟dev一样了。
 在-f前git status查看了状态
 
 
+工作中经常会遇到：
+
+在当前版本稳定的情况下，再开发新的部分。
+可以在当前的分支下 新建分支。
+
+git checkout --all 
+
+********************************
+可以查看当前所有的分支
+
+git checkout -b newBranchName 
+
+在当前的分支下新建分支
+
+可以在newBranchName下查看到所有的本地代码。
+
+********************************
+
+使用 git checkout  branchName 可以切换分支
+
+********************************
+
+在多人开发的环境下，提交自己的代码前，一定要使用
+
+git pull origin branchName
+
+********************************
+
+先将branchName远程的代码拉取到自己的本地。
+
+然后再pushorigin branchName
