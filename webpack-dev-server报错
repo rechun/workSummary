@@ -1,0 +1,38 @@
+在项目中运行npm run dev时候突然报错
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+> webpack-dev-server --inline --progress --config build/webpack.dev.conf.js
+
+TypeError: Cannot destructure property `compile` of 'undefined' or 'null'.
+    at addHooks (D:\project\ark-control-init-fe\node_modules\webpack-dev-server\lib\Server.js:114:49)
+    at new Server (D:\project\ark-control-init-fe\node_modules\webpack-dev-server\lib\Server.js:127:5)
+    at startDevServer (D:\project\ark-control-init-fe\node_modules\webpack-dev-server\bin\webpack-dev-server.js:355:14)
+    at processOptions (D:\project\ark-control-init-fe\node_modules\webpack-dev-server\bin\webpack-dev-server.js:309:5)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+    at Function.Module.runMain (module.js:695:11)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:612:3
+    
+    
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  在安装webpack-dev-server@3.0.0后编译成功
+  
+  npm install -D webpack-dev-server@3.0.0
+  
+  
+  
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+npm notice save webpack-dev-server is being moved from dependencies to devDependencies
+npm WARN webpack-cli@3.1.2 requires a peer of webpack@^4.x.x but none is installed. You must install peer dependencies yourself.
+npm WARN webpack-dev-server@3.0.0 requires a peer of webpack@^4.0.0-beta.1 but none is installed. You must install peer dependencies yourself.
+
++ webpack-dev-server@3.0.0
+added 24 packages from 14 contributors, removed 25 packages, updated 11 packages and audited 33570 packages in 38.312s
+found 1 high severity vulnerability
+  run `npm audit fix` to fix them, or `npm audit` for details
+  
+  
