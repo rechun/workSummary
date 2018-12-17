@@ -1,0 +1,7 @@
+isNaN()
+isFinite()
+parseInt() 与 parseFloat()
+encodeURI() 和 encodeURIComponent()
+decodeURI() 和 decodeURIComponent()
+eval()
+
