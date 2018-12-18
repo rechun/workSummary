@@ -1,0 +1,2 @@
+ <input   oninput="if(value.length>9)value=value.slice(0,9)"  onkeyup="this.value=this.value.replace(/\D|^0/g,'')" 
+ onafterpaste="this.value=this.value.replace(/\D|^0/g,'')  v-model.trim="model"  >
