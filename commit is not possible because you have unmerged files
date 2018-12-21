@@ -1,0 +1,10 @@
+GIT merge error “commit is not possible because you have unmerged files”
+
+
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+
+If you have fixed the conflicts you need to add the files to the stage with git add [filename], then commit as normal.
