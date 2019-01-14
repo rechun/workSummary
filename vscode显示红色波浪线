@@ -1,0 +1,7 @@
+因为我打开了esline
+
+不停提示我的代码格式有问题
+
+在base.env.conf.js里删除了eslint-loader
+
+问题解决
