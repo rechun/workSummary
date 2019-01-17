@@ -49,3 +49,22 @@ var checkObject = function(){
       }
     }
 }
+
+每次调用这个函数时都返回一个新对象.
+
+================================ 1.6 ==============================
+  类也可以
+  
+  var checkObject = function (){
+    this.checkName = function(){
+      //验证姓名
+    },
+    this.checkEmail = function(){
+      //验证邮箱
+    },
+    this.checkPassword = function(){
+      //验证密码
+    }
+  }
+  var a = new checkObject();
+  a.checkEmail();
