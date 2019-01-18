@@ -1,0 +1,4 @@
+ getRandomColor() {
+         console.log('#'+(Math.random()*0xffffff<<0).toString(16))
+         return '#'+(Math.random()*0xffffff<<0).toString(16)
+},
