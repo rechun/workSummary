@@ -4,8 +4,8 @@ OOP（Object-oriented programming） 面向对象编程
 以提高程序的重用性/灵活性/扩展性.
 
 
-================================ 1.3 ==============================
-将对象收编变量 
+================================ 1.3  将对象收编变量 ==============================
+
 var CheckObject = {
   checkName:function(){
     //验证姓名
@@ -19,9 +19,9 @@ var CheckObject = {
 }
 将所有的函数作为checkObject对象的方法，这样我们就只有一个对象。
 
-================================ 1.4 ==============================
+================================ 1.4  对象的另一种形式==============================
 
-对象的另一种形式
+
 var checkObject = function (){};
 checkObject.checkName = function(){
   //验证姓名
@@ -52,8 +52,7 @@ var checkObject = function(){
 
 每次调用这个函数时都返回一个新对象.
 
-================================ 1.6 ==============================
-  类也可以
+================================ 1.6    类也可以==============================
   
   var checkObject = function (){
     this.checkName = function(){
@@ -68,3 +67,63 @@ var checkObject = function(){
   }
   var a = new checkObject();
   a.checkEmail();
+  
+  
+================================ 1.7 一个检测类 ==============================
+
+ 我们把所有的方法放在函数内部,通过this定义。
+ 每一次通过new 关键字创建新对象的时候,新创建的对象都会对类的this上的属性进行复制.
+ 
+ var checkObject = function(){}
+ checkObject.prototype.checkName = function(){
+    //验证姓名
+ }
+  checkObject.prototype.checkEmail = function(){
+    //验证邮箱
+  }
+   checkObject.prototype.checkPassword = fuction(){
+      //验证密码
+   }
+   
+   
+   var checkObject = function(){}
+   checkObject.prototype = function(){
+      checkName = function(){
+        //验证姓名
+      }
+      checkEmail = function(){
+        //验证邮箱
+     }
+      checkPassword = function(){
+        //验证密码
+     }
+   }
+   
+   这两种方法都可以
+   
+   这样创建对象实例的时候,创建出来的对象所拥有的方法就都是一个了.
+   因为他们都要依赖protptype原型,依次寻找,
+   他们都绑定在checkObject对象类的原型上.
+   
+   
+   ================================ 1.7 方法还可以这样用 ==============================
+ 
+    在js中this指向的就是当前对象,所以你可以将它返回.
+    
+    
+    var checkObject = function(){
+      checkName :function(){
+        //验证姓名
+        return this
+      }
+      checkEmail :function(){
+        //验证姓名
+        return this
+      }
+      checkPassword :function(){
+        //验证邮箱
+        return this
+      }
+    }
+  
+  
