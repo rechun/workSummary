@@ -106,7 +106,7 @@ var checkObject = function(){
    他们都绑定在checkObject对象类的原型上.
    
    
-   ================================ 1.7 方法还可以这样用 ==============================
+   ================================ 1.8 方法还可以这样用 ==============================
  
     在js中this指向的就是当前对象,所以你可以将它返回.
     
@@ -125,5 +125,40 @@ var checkObject = function(){
         return this
       }
     }
+    
+    ================================ 1.9 函数的祖先 ==============================
+  
+  你想给每一个函数都添加一个检测邮箱的方法
+  Function.prototype.checkEmail = function(){
+    //验证邮箱
+  }
   
   
+  如果你喜欢函数形式,name你可以这么做
+  var f = function(){ };
+  f.checkEmail();
+  
+  如果你喜欢类的形式可以这么做
+  var f = new Function();
+  f.checkEmail();
+  
+ 这样污染了原生对象Function,所以别人创建的函数也会被你创建的函数所污染,造成不必要的开销.
+ 
+ 你可以抽象出一个统一添加方法的功能方法
+ Function.prototype.addMethod = function(name,fn){
+  this[name] = fn;
+ }
+ 
+ 当你想添加邮箱验证和姓名验证方法
+ 
+ var methods = function(){ };
+ 或者
+ var methods = new Function();
+ methods.addMethod('checkName',function(){
+    //验证姓名
+ })
+ methods.addMethod('checkEmail',function(){
+    //验证邮箱
+ })
+ methods.checkName();
+ methods.checkEmail();
