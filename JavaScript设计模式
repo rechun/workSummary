@@ -162,3 +162,30 @@ var checkObject = function(){
  })
  methods.checkName();
  methods.checkEmail();
+ 
+ 
+ ================================ 1.10 可以链式添加么 ==============================
+ 如果我想链式添加方法,在addMethod中将this返回
+ Function.prototype.addMethod = function(name,fn){
+    this[name] = fn;
+    return this;
+ }    
+ methods.addMethod('checkName',function(){
+    //验证姓名
+    return this;
+ }).addMethod('checkEmail',function(){
+    //验证邮箱
+    return this;
+ });
+ 
+ methods.checkName().checkEmail();
+ 
+ 
+  ================================ 1.11 换一种方式使用方法 ==============================
+ 
+ Function.prototype.addMethod = function(name,fn){
+  return.prototype[name] = fn;
+ }
+ 
+ 
+     
