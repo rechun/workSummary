@@ -187,5 +187,13 @@ var checkObject = function(){
   return.prototype[name] = fn;
  }
  
- 
-     
+var Methods = function(){};
+methods.addMethod('checkName',function(){
+    //验证姓名
+}).addMethod('checkEmail',function(){
+    //验证邮箱
+})
+var m = new Methods();
+m.checkEmail();
+
+
