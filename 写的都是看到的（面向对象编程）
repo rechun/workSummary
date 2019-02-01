@@ -7,3 +7,36 @@
 对于js这种解释性的弱类型语言，没有经典强类型语言中的class关键字实现类的封装。
 
 js中是通过特性模仿实现的,这带来了极高的灵活性。
+
+================================2.2 封装=====================================
+
+创建一个类
+  在函数内部通过对this变量添加属性或者方法来实现对类添加属性或方法
+var Book = function(id,bookname,price){
+  this.id = id;
+  this.bookname = bookname;
+  this.price = price;
+  
+}
+  通过在类的原型上添加属性和方法
+  
+  1.为原型对象属性赋值
+  
+  Book.prototype.display = function(){
+      //展示这本书
+  }
+  
+  2.将对象赋值给类的原型对象
+  Book.prototype = {
+    display:function(){
+      //  展示这本书
+    }
+  }
+  
+  我们将所需要的方法和属性都封装在我们抽象的Book类
+  
+  使用的时候需要用new 关键字来实例化创建新的对象
+  
+  var book = new Book(10,'javascript设计模式',50);
+  
+  
