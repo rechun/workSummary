@@ -52,3 +52,15 @@ var Book = function(id,bookname,price){
   
   通过this定义的属性或方法是该对象自身拥有的。
   
+  constructor
+  
+  constructor是一个属性，当创建一个函数或者对象时，都会为其创建一个原型对象。
+  
+  在prototype对象中，又会像函数中创建this一样创建一个constructor属性。
+  
+  constructor属性指向的就是拥有整个原型对象的函数或对象。
+  
+  
+  一个
+  从
+  
