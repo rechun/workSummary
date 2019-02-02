@@ -40,3 +40,15 @@ var Book = function(id,bookname,price){
   var book = new Book(10,'javascript设计模式',50);
   
   
+  
+  
+  通过this添加的属性、方法是在当前对象上添加的。
+  js是一种基于原型prototype的语言
+  每创建一个对象时候，他都有一个原型prototype用于指向其基础的属性、方法。
+  
+  通过prototype继承的方法并不是对象自身的。
+  在使用这些方法时，需要通过prototype一级一级查找来得到。
+  
+  
+  通过this定义的属性或方法是该对象自身拥有的。
+  
