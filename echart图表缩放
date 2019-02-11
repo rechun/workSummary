@@ -1,0 +1,28 @@
+ dataZoom: [{
+            show: false,
+            height: 30,
+            xAxisIndex: [
+                0
+            ],
+            bottom: 40,
+            start: 0,
+            end: 100,
+            textStyle: {
+                color: "#fff"
+            },
+            borderColor: "#90979c"
+        },
+        {
+            type: "inside",
+            show: true,
+            height: 15,
+            xAxisIndex: [
+                0
+            ],
+            start: 1,
+            end: 35
+        }
+    ],
+    
+    
+    
