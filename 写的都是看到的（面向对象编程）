@@ -59,8 +59,52 @@ var Book = function(id,bookname,price){
   在prototype对象中，又会像函数中创建this一样创建一个constructor属性。
   
   constructor属性指向的就是拥有整个原型对象的函数或对象。
+ 
+  
+  ——-------------------------------2.2属性与方法封装——----------------------------
+  //私有属性与私有方法，特权方法，对象共有属性和对象共有方法
+  //构造器
+  var Book = function(id,name,price){
+    var num = 1;//私有属性
+    function checkId(){//私有方法
+    
+    };
+    this.getName = function(){//特权方法
+    
+    };
+    this.getPrice = function(){//特权方法
+    
+    };
+    this.setName = function(){//特权方法
+    
+    };
+    this.setPrice = function(){//特权方法
+    
+    };
+    this.id = id;//对象共有属性
+    this.copy = function(){//对象公有方法
+    
+    };
+    this.setName(name);//构造器
+    this.setPrice(price);//构造器
+ }
+ 
+ @@@通过js的函数级作用域来实现在函数内创建外界访问不到的私有变量，私有方法；
+ 
+ @@@通过new关键字实例化对象；在类内部this上定义的属性和方法复制到新的对象（作为对象的公有方法）
+ 
+ @@@prototype对象中的属性和方法成为公有属性 和方法；
+ 
+ Book.isChinese = true;//类静态公有属性（对象不能访问）
+ Book.resetTime = function(){//类静态公有方法（对象不能访问）
+  //  重新设置时间
+ }
+ Book.prototype = {
+    isJSBook:false,//公有属性
+    display:function(){//公有方法
+    
+    }
+ }
   
   
-  一个
-  从
   
