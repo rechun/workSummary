@@ -61,7 +61,7 @@ var Book = function(id,bookname,price){
   constructor属性指向的就是拥有整个原型对象的函数或对象。
  
   
-  ——-------------------------------2.2属性与方法封装——----------------------------
+  ——-------------------------------2.2.2属性与方法封装——----------------------------
   //私有属性与私有方法，特权方法，对象共有属性和对象共有方法
   //构造器
   var Book = function(id,name,price){
@@ -107,4 +107,35 @@ var Book = function(id,bookname,price){
  }
   
   
+  ——-------------------------------2.2.3 闭包实现——----------------------------
   
+var Book = （function(){
+  var bookNum = 0;//静态私有变量
+  function checkBook(name){//静态私有方法
+  
+  }
+  function book(newId,newName,newPrice){//创建类
+    var name,price;//私有变量
+    function checkID(id){ //私有方法
+    }
+    this.getName = function(){};//特权方法
+    this.getPrice = function(){};//特权方法
+    this.setName = function(){};//特权方法
+    this.setPrice = function(){};//特权方法
+    this.id = newId;//公有属性
+    this.copy = function(){}//公有方法
+    bookNum++;
+    if(bookNum >100) throw new Error（'我们仅出版100本书'）
+    this.setName(name);//构造器
+    this.setPrice(price);//构造器
+  }
+  _book.prototype = {//创建原型
+    isJSBook :false;//静态公有属性
+    display:function(){}//静态公有方法
+  }
+  return _book;//返回类
+}()）;
+
+
+@@@闭包是有权限访问另外一个函数作用域中变量的函数 
+
