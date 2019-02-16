@@ -1,0 +1,34 @@
+
+==============================安装==============================  
+
+1.新建一个store文件夹,在文件夹下新建store.js
+
+        store.js 引入vue 和vuex
+
+        import Vue from 'vue'  
+
+        import Vuex from 'vuex'  
+
+
+2.在store.js文件里对Vuex进行引用
+        Vue.use(Vues);
+        
+        
+3.在main.js中引入新建vuex文件        
+        import store from './store/store'
+        
+============================== 使用==============================       
+
+1.在store.js文件里增加一个常量
+
+        state:{
+            count:1
+        }
+ 2.用export default封装让外部可以引用
+ 
+      exportant default new Vuex.Store({
+          name:'store',
+          state:{
+              count:1
+          }
+      })
