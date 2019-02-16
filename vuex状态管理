@@ -32,3 +32,48 @@
               count:1
           }
       })
+3.新建一个Vue的测试模板
+                 <template>
+                    <div>
+                        <h2>{{msg}}</h2>
+                        <hr/>
+                        <h3>{{$store.state.count}}</h3>
+                    </div>
+                </template>
+                <script>
+                export default {
+                  data () {
+                    return {
+                      msg: 'Hello Vuex'
+                    }
+                  },
+                  computed: {
+                    count () {
+                      return this.$store.state.count
+                    }
+                  }
+                }
+                </script>
+  4.在store.js文件中加入两个改变state的方法。
+  
+        mutations: {
+            increment (state) {
+              state.count += 1
+            },
+            decrement (state) {
+              state.count -= 1
+            }
+          }
+    5.在test.vue模板中加入两个按钮，并调用mutations中的方法。 
+    
+        <div>
+                <button @click="$store.commit('increment')">+</button>
+                 <button @click="$store.commit('decrement')">-</button>
+        </div>
+    6. 在router文件夹下的index.js中引用文件，定义对应的路由，运行程序并进入该界面，点击按钮查看效果
+                {
+                   path: '/count',
+                   name: 'Count',
+                   component: Count
+                }
+    
