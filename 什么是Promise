@@ -1,0 +1,23 @@
+Promise是抽象异步处理对象以及对其进行各种操作的组件
+
+Promise把类似的异步处理对象和处理规则进行规范化，按照采用统一的接口来编写
+
+
+=================================使用Promise进行异步处理====================================
+
+var promise = getAsyncPromise('fileA.txt');
+  promise.then(function(result){
+          //获取文件内容成功时的处理
+  }),catch(function(error){
+          //获取文件内容失败时的处理
+  });
+  
+  
+  =================================Constructor====================================
+  
+  Promise类似XMLHttpRequest,从构造函数Promise来创建一个新建新Promise对象作为接口
+  
+  var promise  =new Promise(function(resolve,reject){
+            //异步处理
+            //处理结束后，调用resolve或reject
+  });
