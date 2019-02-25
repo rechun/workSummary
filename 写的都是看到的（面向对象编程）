@@ -139,3 +139,22 @@ var Book = （function(){
 
 @@@闭包是有权限访问另外一个函数作用域中变量的函数 
 
+
+ ——-------------------------------2.2.4 创建对象的安全模式——----------------------------
+ 
+ new关键字是作用可以看作是对当前对象的this不停赋值。
+ 
+ var Book = function (title,time,type){
+    if(this.instanceof Book){
+        this.title = title;
+        this.time = time;
+        this.type = type;
+    }else{
+    return new Book(title,time,type)
+  }
+ }
+ var book = Book('javascripe','2014','js');
+ 
+ 
+ 
+  
