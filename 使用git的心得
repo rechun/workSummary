@@ -54,3 +54,11 @@ git pull origin branchName
 查了一下发现是因为windows的字符集有问题  gitBash不识别。
 
 也是醉了(＃￣～￣＃)
+
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+git push origin --delete Chapater6   可以删除远程分支Chapater6  
+
+git branch -d Chapater8 可以删除本地分支（在主分支中）
