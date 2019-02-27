@@ -1,0 +1,26 @@
+1.当我push origin branch 时候遇到 Updates were rejected because the remote contains work that you do
+
+   原因：在本地新建库后，与远程仓库的内容不一致导致的。
+   
+   解决方法：在向远程库推送的时候，要先进行pull，让本地新建的库和远程库进行同步。
+   
+   
+正确步骤：
+
+git init //初始化仓库
+git add .(文件name) //添加文件到本地仓库
+git commit -m “first commit” //添加文件描述信息
+git remote add origin + 远程仓库地址 //链接远程仓库，创建主分支
+git pull origin master // 把本地仓库的变化连接到远程仓库主分支
+git push -u origin master //把本地仓库的文件推送到远程仓库
+
+
+2.push origin 遇到 Please enter a commit message to explain why this merge is necessary,
+
+基本原因是因为本地库的代码跟远程库有冲突需要合并,处理方法
+
+按键盘字母 i 进入insert(输入)模式,编辑必要的注释 说明合并的原因,编辑的内容会在第一行显示,也可不修改
+
+按"Esc"
+
+输入":wq",按回车键即可
