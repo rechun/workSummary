@@ -1,0 +1,3 @@
+  <p style={{whiteSpace:"pre"}}>
+          {this.state.msg.replace(/;/g," \n ")}
+            </p>
