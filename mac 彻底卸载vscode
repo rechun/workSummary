@@ -1,0 +1,1 @@
+卸载所有vscode插件：`sudo rm -rf $HOME/.vscode`
