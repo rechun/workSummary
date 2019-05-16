@@ -1,0 +1,16 @@
+我的mac没有homebrew
+
+
+但是之前安装了node
+
+
+在terminal 输入npm install -g yarn
+
+
+
+发现没有权限
+
+用了 sudo npm install -g yarn安装才可以
+
+
+用yarn --version检查安装是否成功
