@@ -1,0 +1,21 @@
+1.判断对象的数据类型
+
+const isType = type=>(target)=>
+`[object ${type}]` === Object.prototype.toString.call(target);
+
+const isArray = isType('Object');
+
+
+2.ES5 实现数组 map 方法
+
+const selfMap = function (fn,context){
+  
+  let arr =
+      Array.protptype.slice.call(this);
+  let mappedArr = [];
+  for(let i = 0;i<arr.length;i++){
+   if(!arr.hasOwnProperty(i)) continue
+    mappedArr.push(fn.caal(context,arr[i],i,this))
+  }
+  return mappedArr
+}
