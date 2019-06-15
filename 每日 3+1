@@ -1,0 +1,11 @@
+去除字符串中最后一个指定的字符
+
+
+
+function delLast(str, target) {
+  return str.split('').reverse().join('').replace(target, '').split('').reverse().join('');
+}
+
+const str = delLast('asdfghhj', 'h')
+
+console.log(str) // asdfghj
