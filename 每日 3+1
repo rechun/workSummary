@@ -47,3 +47,9 @@ tabindex:设置元素可以获得焦点，通过tab导航
 title:规定元素有关的额外信息
 translate:元素和子孙节点内容是否需要本地化（均不支持）
 
+
+
+对__proto__和prototype的理解
+
+只有函数对象才有prototype属性；prototype对象上存放共用的方法和属性
+对象都有__proto__属性，__proto__是指向该对象构造函数的原型属性（即prototype）
