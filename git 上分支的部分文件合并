@@ -13,3 +13,5 @@ git checkout –patch B_branch f.txt
 git checkout B_branch 
 cd path/to/f.txt 
 git checkout A_bracn f.txt
+
+git cherry-pick  可以将某次提交合并到当前分支
