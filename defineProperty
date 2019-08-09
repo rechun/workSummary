@@ -1,0 +1,30 @@
+
+“Object.defineProperty( myObject, "a", {
+    value: 2,
+    writable: false, // not writable! 
+    configurable: true,
+    enumerable: true
+} );
+”
+
+摘录来自: [美]辛普森（Kyle Simpson）. “你不知道的JavaScript（上卷） (图灵程序设计丛书)。” iBooks. 
+
+
+“1. Writable
+writable 决定是否可以修改属性的值。”
+
+摘录来自: [美]辛普森（Kyle Simpson）. “你不知道的JavaScript（上卷） (图灵程序设计丛书)。” iBooks. 
+
+
+“2. Configurable
+只要属性是可配置的，就可以使用defineProperty(..) 方法来修改属性描述符：”
+
+
+“即便属性是configurable:false ， 我们还是可以把writable 的状态由true 改为false ，但是无法由false 改为true 。”
+
+3. Enumerable
+
+“个描述符控制的是属性是否会出现在对象的属性枚举中，比如说for..in 循环。如果把enumerable 设置成false ，
+
+这个属性就不会出现在枚举中，虽然仍然可以正常访问它。相对地，设置成true 就会让它出现在枚举中。”
+
