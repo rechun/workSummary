@@ -35,3 +35,15 @@ alert(arr.length == 0);//true
 var data = {};
 var arr = Object.keys(data);
 alert(arr.length == 0);//true
+
+
+
+在你不知道的JavaSctipt中  我看到基本类型中的null 
+“typeof null === "object"; // true”
+
+“需要使用复合条件来检测 null 值的类型：”
+
+“var a = null;
+
+(!a && typeof a === "object"); // true”
+
