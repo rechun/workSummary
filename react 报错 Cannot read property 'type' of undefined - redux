@@ -1,0 +1,12 @@
+一开始页面是正常的
+
+后来 同事改了我的代码，
+
+function nameReducer(state = initialState, action) {
+switch(action.type){
+}}
+
+在es6里 state 是给了默认值的,但是没有type;
+
+
+state 与action搞反了，所以报了 Cannot read property 'type' of undefined - redux
