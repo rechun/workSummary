@@ -1,0 +1,12 @@
+https://juejin.im/post/5ac1aaad6fb9a028d444bb87
+
+
+总结
+1. 在组件生命周期中或者 react 事件绑定中，setState 是通过异步更新的。 
+
+2. 在延时的回调或者原生事件绑定的回调中调用 setState 不一定是异步的。
+
+这个结果并不说明 setState 异步执行的说法是错误的，更加准确的说法应该是 setState 不能保证同步执行
+
+
+
