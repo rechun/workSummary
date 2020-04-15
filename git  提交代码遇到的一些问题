@@ -43,3 +43,8 @@ git push -u origin master //把本地仓库的文件推送到远程仓库
 输入密码
 
 ls查看路径
+
+删除远程分支遇到 
+遇到remote ref does not exist   
+ 是因为加了origin/xxx  只需要输入分支名就可以
+
