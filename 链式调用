@@ -1,0 +1,5 @@
+
+Function.prototype.addMEthod=function(name,fn){
+  this[name=]=fn;
+  return this;
+}
